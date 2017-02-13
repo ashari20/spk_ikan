@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_refresh_layout"
+    tools:context="com.example.rika.spk.lihat_bobot">
+
+    <ScrollView
+        android:id="@+id/scrolllayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/suhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suhu:"
+                android:layout_marginBottom="-10dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/suhu_sangatrendah_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/suhu_rendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/suhu_rendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/suhu_sedang_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/suhu_sedang_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/suhu_tinggi_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/suhu_tinggi_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/suhu_sangattinggi_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Ph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PH Air:"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/ph_sangatrendah_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/ph_rendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/ph_rendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/ph_sedang_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/ph_sedang_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/ph_tinggi_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/ph_tinggi_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/ph_sangattinggi_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tinggidarat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ketinggian Daratan:"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/tinggi_sangatrendah_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/tinggi_rendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/tinggi_rendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/tinggi_sedang_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/tinggi_sedang_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/tinggi_tinggi_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/tinggi_tinggi_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/tinggi_sangattinggi_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lama Ideal Pembesaran Ikan:"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/lama_sangatrendah_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/lama_rendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/lama_rendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/lama_sedang_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/lama_sedang_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/lama_tinggi_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/lama_tinggi_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/lama_sangattinggi_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/oksigen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oksigen Terlarut:"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/oks_sangatrendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/oks_sangatrendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/oks_rendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/oks_rendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/oks_sedang_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/oks_sedang_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/oks_tinggi_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/oks_tinggi_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/oks_sangattinggi_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/kemudahanpakan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kemudahan Pakan:"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mudahpakan_sanggatrendah_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahpakanval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mudahpakan_rendah_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahpakanval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mudahpakan_sedang_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahpakanval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mudahpakan_tinggi_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahpakanval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mudahpakan_sangattinggi_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahpakanval"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/minat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minat Masyarakat terhadap ikan:"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/minat_sanggatrendah_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahminatval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/minat_rendah_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahminatval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/minat_sedang_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahminatval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/minat_tinggi_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahminatval"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/minat_sangattinggi_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mudahminatval"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/luaskolam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Luas Kolam:"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/luas_sangatrendah_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendah: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/luas_rendah_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/luas_rendah_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sedang: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/luas_sedang_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/luas_sedang_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/luas_tinggi_nilai_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/D: "
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/luas_tinggi_nilai_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat Tinggi: "
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/luas_sangattinggi_nilai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nilai"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnsave"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/accent"
+                android:text="SAVE"
+                android:textColor="@color/md_white_1000"
+                android:onClick="savebobot"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ikan_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rika.spk.Ikan_details">
+
+    <ScrollView
+        android:id="@+id/scrolllayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/foto_ikan"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/md_white_1000"
+                android:src="@drawable/no_image_available"
+                android:scaleType="centerCrop"
+                android:onClick="editimage"/>
+
+            <TextView
+                android:id="@+id/nama_ikan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Ikan: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/suhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suhu: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/ph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PH: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/tinggidarat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tinggi Darat: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/lamaikan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lama Ikan: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/oksigen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oksigen: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/mudahpakan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mudah pakan: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/minat_mas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minat Masyarakat: ..."
+                android:padding="20dp"/>
+            <TextView
+                android:id="@+id/luaskolam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Luas Kolam: ..."
+                android:padding="20dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

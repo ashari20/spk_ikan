@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rika.spk.hasil_spk"
+    android:id="@+id/mainlayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pagelayout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textInputanUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Input"
+            android:textSize="22dp"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/textInputanSuhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/textInputanPh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textInputanOksigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textInputanLama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textInputanLuas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textInputanTinggi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textInputanMinat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textInputanMudah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/textHasilEntropi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasil Metode Entropy"
+            android:textSize="22dp"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/textEntropiSuhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/textEntropiPh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textEntropiOksigen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textEntropiLama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textEntropiLuas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textEntropiTinggi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textEntropiMinat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/textEntropiMudah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u2022 User Input"
+            android:textSize="18dp"
+            android:paddingLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/textHasilRekomendasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tabel Perankingan"
+            android:textSize="22dp"
+            android:padding="16dp" />
+
+        <TableLayout
+            android:id="@+id/tablerekomendasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="11dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="30dp"
+            android:layout_gravity="center">
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/textHasilRekomendasiSPK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rekomendasi"
+            android:textSize="18dp"
+            android:padding="16dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

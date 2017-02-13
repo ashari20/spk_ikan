@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/txt_id"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+
+    <EditText
+        android:id="@+id/txt_nama_ikan"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Nama Ikan"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+
+    <EditText
+        android:id="@+id/txt_deskripsi"
+        android:layout_marginBottom="10dp"
+        android:hint="Deskripsi"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+
+    <EditText
+        android:id="@+id/txt_suhu"
+        android:layout_marginBottom="10dp"
+        android:hint="Suhu"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+    <EditText
+        android:id="@+id/txt_ph"
+        android:layout_marginBottom="10dp"
+        android:hint="PH Air"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+    <EditText
+        android:id="@+id/txt_tinggi"
+        android:layout_marginBottom="10dp"
+        android:hint="Ketinggian Daratan"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+    <EditText
+        android:id="@+id/txt_lama"
+        android:layout_marginBottom="10dp"
+        android:hint="Lama Ideal Pembesaran Ikan"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+    <EditText
+        android:id="@+id/txt_oksigen"
+        android:layout_marginBottom="10dp"
+        android:hint="Oksigen"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+    <EditText
+        android:id="@+id/txt_pakan"
+        android:layout_marginBottom="10dp"
+        android:hint="Kemudahan Pakan"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+    <EditText
+        android:id="@+id/txt_minat"
+        android:layout_marginBottom="10dp"
+        android:hint="Minat Masyarakat Terhadap Ikan"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"/>
+        <EditText
+            android:id="@+id/txt_luas"
+            android:layout_marginBottom="10dp"
+            android:hint="Luas Kolam"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background_normal"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

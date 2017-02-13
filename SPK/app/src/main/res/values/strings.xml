@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SPK </string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="mudahpakanval">
+        <item>Sangat Tidak Mudah</item>
+        <item>Tidak Mudah</item>
+        <item>Sedang</item>
+        <item>Mudah</item>
+        <item>Sangat Mudah</item>
+    </string-array>
+    <string-array name="mudahminatval">
+        <item>Tidak Disukai</item>
+        <item>Kurang Disukai</item>
+        <item>Sedang</item>
+        <item>Disukai</item>
+        <item>Sangat Disukai</item>
+    </string-array>
+</resources>
