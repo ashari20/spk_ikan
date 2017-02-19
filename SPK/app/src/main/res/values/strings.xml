@@ -16,4 +16,14 @@
         <item>Disukai</item>
         <item>Sangat Disukai</item>
     </string-array>
+    <string-array name="prioritas">
+        <item>Prioritas 1</item>
+        <item>Prioritas 2</item>
+        <item>Prioritas 3</item>
+        <item>Prioritas 4</item>
+        <item>Prioritas 5</item>
+        <item>Prioritas 6</item>
+        <item>Prioritas 7</item>
+        <item>Prioritas 8</item>
+    </string-array>
 </resources>
