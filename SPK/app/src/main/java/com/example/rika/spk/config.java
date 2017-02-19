@@ -5,7 +5,7 @@ package com.example.rika.spk;
  */
 public class config {
     //url to our login.php
-public static final String LOGIN_URL = "http://192.168.1.100/spk/spk/login.php";
+public static final String LOGIN_URL = "http://192.168.1.101/spk/spk/login.php";
     //public static final String LOGIN_URL = "http://192.168.56.1/spk/spk/login.php";
 //    public static final String LOGIN_URL = "http://192.168.1.101:8080/spk/spk/login.php";
 //    public static final String LOGIN_URL = "http://10.47.217.200:8080/spk/spk/login.php";

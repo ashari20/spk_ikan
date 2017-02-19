@@ -576,8 +576,8 @@ public class spk extends AppCompatActivity implements Serializable {
                         ListLama.add(Float.parseFloat(dtikan.getLAMA()));
                         ListLuas.add(Float.parseFloat(dtikan.getLUAS()));
                         ListOksigen.add(Float.parseFloat(dtikan.getOKSIGEN()));
-                        ListMudah.add(Float.parseFloat(dtikan.getMUDAH()));
-                        ListMinat.add(Float.parseFloat(dtikan.getMINAT()));
+//                        ListMudah.add(Float.parseFloat(dtikan.getMUDAH()));
+//                        ListMinat.add(Float.parseFloat(dtikan.getMINAT()));
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -1181,6 +1181,39 @@ public class spk extends AppCompatActivity implements Serializable {
     }
 
     public void klikproses(View view) {
-        validator.validate();
+        //validator.validate();
+        _suhu = getSelectValue(suhu.getSelectedItem().toString());
+        _ph = getSelectValue(ph.getSelectedItem().toString());
+        _lama = getSelectValue(lama.getSelectedItem().toString());
+        _oksigen = getSelectValue(oksigen.getSelectedItem().toString());
+        _luas = getSelectValue(luas.getSelectedItem().toString());
+        _mudah = getSelectValue(mudah.getSelectedItem().toString());
+        _minat = getSelectValue(minat.getSelectedItem().toString());
+        _tinggi = getSelectValue(tinggi.getSelectedItem().toString());
+
+        wSuhu = _suhu / 100;
+        wPh = _ph / 100;
+        wLama = _lama / 100;
+        wOksigen = _oksigen / 100;
+        wLuas = _luas / 100;
+        wMudah = _mudah / 100;
+        wMinat = _minat / 100;
+        wTinggi = _tinggi / 100;
+
+        list_input = new HashMap<String, Double>();
+        list_input.put("suhu", wSuhu);
+        list_input.put("ph", wPh);
+        list_input.put("oksigen", wOksigen);
+        list_input.put("lama", wLama);
+        list_input.put("luas", wLuas);
+        list_input.put("tinggi", wTinggi);
+        list_input.put("minat", wMinat);
+        list_input.put("mudah", wMudah);
+
+        progressDialog = new ProgressDialog(spk.this);
+        progressDialog.setMessage("Loading..");
+        progressDialog.show();
+
+        getData();
     }
 }

@@ -44,8 +44,8 @@ public class hasil_spk extends AppCompatActivity {
     LinearLayout pagelayout;
     RelativeLayout.LayoutParams relativeParams;
 
-    HashMap<String, Float> inputan;
-    HashMap<String, Float> entropi;
+    HashMap<String, Double> inputan;
+    HashMap<String, Double> entropi;
 
     ArrayList<Data> hasil;
 
@@ -83,8 +83,8 @@ public class hasil_spk extends AppCompatActivity {
 
         Bundle extra = getIntent().getBundleExtra("bundlehasil");
         hasil = (ArrayList<Data>) extra.getSerializable("hasilspk");
-        inputan = (HashMap<String, Float>) extra.getSerializable("listinput");
-        entropi = (HashMap<String, Float>) extra.getSerializable("listentropi");
+        inputan = (HashMap<String, Double>) extra.getSerializable("listinput");
+        entropi = (HashMap<String, Double>) extra.getSerializable("listentropi");
 
         userinputsuhu.setText("• Suhu: " + inputan.get("suhu"));
         userinputph.setText("• PH: " + inputan.get("ph"));
