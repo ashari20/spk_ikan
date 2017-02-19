@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.rika.spk.data.Data;
@@ -43,29 +44,14 @@ public class spk extends AppCompatActivity implements Serializable {
 
     ActionBar actionBar;
 
-    @NotEmpty
-    EditText suhu;
-
-    @NotEmpty
-    EditText ph;
-
-    @NotEmpty
-    EditText tinggi;
-
-    @NotEmpty
-    EditText lama;
-
-    @NotEmpty
-    EditText oksigen;
-
-    @NotEmpty
-    EditText mudah;
-
-    @NotEmpty
-    EditText minat;
-
-    @NotEmpty
-    EditText luas;
+    Spinner suhu;
+    Spinner ph;
+    Spinner tinggi;
+    Spinner lama;
+    Spinner oksigen;
+    Spinner mudah;
+    Spinner minat;
+    Spinner luas;
 
     RelativeLayout mainlayout;
 
@@ -83,23 +69,23 @@ public class spk extends AppCompatActivity implements Serializable {
     NilaiBobot _bobotminat;
     NilaiBobot _bobottinggi;
 
-    float _suhu;
-    float _ph;
-    float _oksigen;
-    float _lama;
-    float _luas;
-    float _mudah;
-    float _minat;
-    float _tinggi;
+    double _suhu;
+    double _ph;
+    double _oksigen;
+    double _lama;
+    double _luas;
+    double _mudah;
+    double _minat;
+    double _tinggi;
 
-    float wSuhu;
-    float wPh;
-    float wOksigen;
-    float wLama;
-    float wLuas;
-    float wMudah;
-    float wMinat;
-    float wTinggi;
+    double wSuhu;
+    double wPh;
+    double wOksigen;
+    double wLama;
+    double wLuas;
+    double wMudah;
+    double wMinat;
+    double wTinggi;
 
     List<Float> ListSuhu;
     List<Float> ListPh;
@@ -251,7 +237,7 @@ public class spk extends AppCompatActivity implements Serializable {
     List<Float> listEntropiMudah;
 
     List<Data> list_hasil = new ArrayList<>();
-    HashMap<String, Float> list_input;
+    HashMap<String, Double> list_input;
     HashMap<String, Float> list_hasilentropi;
     Data hsl;
 
@@ -266,33 +252,33 @@ public class spk extends AppCompatActivity implements Serializable {
         actionBar.setHomeButtonEnabled(true);
 
         mainlayout = (RelativeLayout) findViewById(R.id.mainlayout);
-        suhu = (EditText) findViewById(R.id.input_suhu);
-        ph = (EditText) findViewById(R.id.input_ph);
-        tinggi = (EditText) findViewById(R.id.input_tinggi);
-        oksigen = (EditText) findViewById(R.id.input_oksigen);
-        lama = (EditText) findViewById(R.id.input_lama);
-        mudah = (EditText) findViewById(R.id.input_mudah);
-        minat = (EditText) findViewById(R.id.input_minat);
-        luas = (EditText) findViewById(R.id.input_luas);
+        suhu = (Spinner) findViewById(R.id.input_suhu);
+        ph = (Spinner) findViewById(R.id.input_ph);
+        tinggi = (Spinner) findViewById(R.id.input_tinggi);
+        oksigen = (Spinner) findViewById(R.id.input_oksigen);
+        lama = (Spinner) findViewById(R.id.input_lama);
+        mudah = (Spinner) findViewById(R.id.input_mudah);
+        minat = (Spinner) findViewById(R.id.input_minat);
+        luas = (Spinner) findViewById(R.id.input_luas);
 
         validator = new Validator(spk.this);
         validator.setValidationListener(new Validator.ValidationListener() {
             @Override
             public void onValidationSucceeded() {
 
-                _suhu = Float.parseFloat(suhu.getText().toString());
-                _ph = Float.parseFloat(ph.getText().toString());
-                _lama = Float.parseFloat(lama.getText().toString());
-                _oksigen = Float.parseFloat(oksigen.getText().toString());
-                _luas = Float.parseFloat(luas.getText().toString());
-                _mudah = Float.parseFloat(mudah.getText().toString());
-                _minat = Float.parseFloat(minat.getText().toString());
-                _tinggi = Float.parseFloat(tinggi.getText().toString());
+                _suhu = getSelectValue(suhu.getSelectedItem().toString());
+                _ph = Float.parseFloat(ph.getSelectedItem().toString());
+                _lama = Float.parseFloat(lama.getSelectedItem().toString());
+                _oksigen = Float.parseFloat(oksigen.getSelectedItem().toString());
+                _luas = Float.parseFloat(luas.getSelectedItem().toString());
+                _mudah = Float.parseFloat(mudah.getSelectedItem().toString());
+                _minat = Float.parseFloat(minat.getSelectedItem().toString());
+                _tinggi = Float.parseFloat(tinggi.getSelectedItem().toString());
 
-                float ck = _suhu + _ph + _lama + _oksigen + _luas + _mudah + _minat + _tinggi;
-                if (ck < 100 || ck > 100){
-                    Snackbar.make(mainlayout, "Total Nilai Bobot tidak boleh kurang atau lebih dari 100", Snackbar.LENGTH_LONG).show();
-                }else{
+//                double ck = _suhu + _ph + _lama + _oksigen + _luas + _mudah + _minat + _tinggi;
+//                if (ck < 100 || ck > 100){
+//                    Snackbar.make(mainlayout, "Total Nilai Bobot tidak boleh kurang atau lebih dari 100", Snackbar.LENGTH_LONG).show();
+//                }else{
 
                     wSuhu = _suhu / 100;
                     wPh = _ph / 100;
@@ -303,7 +289,7 @@ public class spk extends AppCompatActivity implements Serializable {
                     wMinat = _minat / 100;
                     wTinggi = _tinggi / 100;
 
-                    list_input = new HashMap<String, Float>();
+                    list_input = new HashMap<String, Double>();
                     list_input.put("suhu", wSuhu);
                     list_input.put("ph", wPh);
                     list_input.put("oksigen", wOksigen);
@@ -318,7 +304,7 @@ public class spk extends AppCompatActivity implements Serializable {
                     progressDialog.show();
 
                     getData();
-                }
+//                }
 
             }
 
@@ -590,8 +576,8 @@ public class spk extends AppCompatActivity implements Serializable {
                         ListLama.add(Float.parseFloat(dtikan.getLAMA()));
                         ListLuas.add(Float.parseFloat(dtikan.getLUAS()));
                         ListOksigen.add(Float.parseFloat(dtikan.getOKSIGEN()));
-//                        ListMudah.add(Float.parseFloat(dtikan.getMUDAH()));
-//                        ListMinat.add(Float.parseFloat(dtikan.getMINAT()));
+                        ListMudah.add(Float.parseFloat(dtikan.getMUDAH()));
+                        ListMinat.add(Float.parseFloat(dtikan.getMINAT()));
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -625,7 +611,7 @@ public class spk extends AppCompatActivity implements Serializable {
                 hitungRasio();
 
                 for (int j = 0; j < arraySuhum3.size(); j++) {
-                    hasil[0][j] = (float) (bobotAkhirSuhu * m3[j][0]) + (bobotAkhirPh * m3[j][1]) - (bobotAkhirTinggi * (m3[j][5])) - (bobotAkhirLama * (m3[j][3])) - (bobotAkhirOksigen * (m3[j][2])) + (bobotAkhirMudah * (m3[j][7])) + (bobotAkhirMinat * (m3[j][6])) - (bobotAkhirLuas * (m3[j][4]));
+                    hasil[0][j] = (float) (bobotAkhirSuhu * m3[j][0]) + (bobotAkhirPh * m3[j][1]) + (bobotAkhirMudah * (m3[j][7])) + (bobotAkhirMinat * (m3[j][6])) - (bobotAkhirOksigen * (m3[j][2])) - (bobotAkhirTinggi * (m3[j][5])) - (bobotAkhirLama * (m3[j][3])) - (bobotAkhirLuas * (m3[j][4]));
 
                     hasilAkhir.add(hasil[0][j]);
 //
@@ -1133,15 +1119,50 @@ public class spk extends AppCompatActivity implements Serializable {
     }
 
     private void reset(){
-        suhu.setText("");
-        ph.setText("");
-        oksigen.setText("");
-        lama.setText("");
-        luas.setText("");
-        tinggi.setText("");
-        minat.setText("");
-        mudah.setText("");
+        suhu.setSelection(0);
+        ph.setSelection(0);
+        oksigen.setSelection(0);
+        lama.setSelection(0);
+        luas.setSelection(0);
+        tinggi.setSelection(0);
+        minat.setSelection(0);
+        mudah.setSelection(0);
     }
+
+    private double getSelectValue(String val) {
+        double v = 0;
+        switch (val){
+            case "Prioritas 1":
+                v = 0.222;
+            break;
+            case "Prioritas 2":
+                v = 0.194;
+            break;
+            case "Prioritas 3":
+                v = 0.111;
+            break;
+            case "Prioritas 4":
+                v = 0.055;
+            break;
+            case "Prioritas 5":
+                v = 0.138;
+            break;
+            case "Prioritas 6":
+                v = 0.167;
+            break;
+            case "Prioritas 7":
+                v = 0.027;
+            break;
+            case "Prioritas 8":
+                v = 0.083;
+            break;
+            default:
+                v = 0;
+            break;
+        }
+        return v;
+    }
+
 
     @Override
     protected void onResume() {

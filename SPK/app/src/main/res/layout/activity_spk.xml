@@ -37,109 +37,122 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_suhu"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="SUHU"
-        android:layout_marginTop="10dp"/>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_ph"
-        android:layout_below="@+id/input_suhu"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="PH AIR"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_tinggi"
-        android:layout_below="@+id/input_ph"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="KETINGGIAN DARATAN"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_lama"
-        android:layout_below="@+id/input_tinggi"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="LAMA IDEAL PEMBESARAN"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_oksigen"
-        android:layout_below="@+id/input_lama"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="OKSIGEN TERLARUT"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_mudah"
-        android:layout_below="@+id/input_oksigen"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="KEMUDAHAN PAKAN"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_minat"
-        android:layout_below="@+id/input_mudah"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="MINAT MASYARAKAT TERHADAP IKAN"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/input_luas"
-        android:layout_below="@+id/input_minat"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:hint="LUAS KOLAM"
+        android:text="SUHU"
         android:layout_marginTop="10dp"
-        />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="PROSES"
-                android:id="@+id/proses_spk"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:onClick="klikproses"/>
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_suhu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PH AIR"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_ph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KETINGGIAN DARATAN"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_tinggi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LAMA IDEAL PEMBESARAN"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_lama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OKSIGEN TERLARUT"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_oksigen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KEMUDAHAN PAKAN"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_mudah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MINAT MASYARAKAT TERHADAP IKAN"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_minat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LUAS KOLAM"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"/>
+
+    <Spinner
+        android:id="@+id/input_luas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/prioritas"></Spinner>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PROSES"
+        android:id="@+id/proses_spk"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="klikproses"/>
 </LinearLayout>
         </ScrollView>
 </RelativeLayout>
-
-
